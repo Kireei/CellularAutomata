@@ -15,7 +15,6 @@ import com.cellularautomata.main.render.InfoBox;
 import com.cellularautomata.main.render.Viewmodes;
 import com.cellularautomata.main.render.ui.AdminCommands;
 import com.cellularautomata.main.render.ui.Button;
-import com.cellularautomata.main.render.ui.Menu;
 
 public class Controlls {
 	public Controlls(){
@@ -85,6 +84,8 @@ public class Controlls {
 							break;
 						case BLACKCELL:
 							CellularAutomata.cells[(int) ((getMousePoint().y / Container.CELLSIZE) * Container.CELLX  + (getMousePoint().x / Container.CELLSIZE))].black();
+							break;
+						default:
 							break;
 					}
 					
@@ -206,7 +207,6 @@ public class Controlls {
 		
 	}
 	public static Point getMousePoint(){
-		String error = "Mouse outside of window";
 		Canvas canvas = Window.getCanvas();
 		Point frame = MouseInfo.getPointerInfo().getLocation();
 		Point p = new Point();

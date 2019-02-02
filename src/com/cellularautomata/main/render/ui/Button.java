@@ -9,7 +9,6 @@ public class Button {
 	public int w;
 	public int h;
 	private int color;
-	private int darkerColor;
 	public String text;
 	private boolean centered;
 	public int id;

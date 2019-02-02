@@ -58,7 +58,6 @@ public class Container implements Runnable{
 		double frameTime = 0;
 		int frames = 0;
 		fps = 0;
-		int tick = 0;
 		
 		CellularAutomata.create();
 

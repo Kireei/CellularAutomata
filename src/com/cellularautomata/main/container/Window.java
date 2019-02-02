@@ -7,7 +7,6 @@ import java.awt.Frame;
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
-import java.awt.event.*;
 
 import javax.swing.JFrame;
 
@@ -21,9 +20,9 @@ public class Window {
 	private Graphics g;
 
 	public Window(Container c) {
-		image = new BufferedImage(c.getWIDTH(), c.getHEIGHT(), BufferedImage.TYPE_INT_RGB);
+		image = new BufferedImage(Container.getWIDTH(), Container.getHEIGHT(), BufferedImage.TYPE_INT_RGB);
 		canvas = new Canvas();
-		Dimension s = new Dimension(c.getWIDTH() , c.getHEIGHT());
+		Dimension s = new Dimension(Container.getWIDTH() , Container.getHEIGHT());
 		canvas.setSize(s);
 
 		frame = new JFrame(c.getTitle());

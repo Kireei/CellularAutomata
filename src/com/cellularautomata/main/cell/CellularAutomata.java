@@ -1,6 +1,5 @@
 package com.cellularautomata.main.cell;
 
-import java.awt.Graphics;
 import java.util.ArrayList;
 
 import com.cellularautomata.main.container.Container;
@@ -9,12 +8,7 @@ import com.cellularautomata.main.render.Renderer;
 import com.cellularautomata.main.render.Viewmodes;
 import com.cellularautomata.main.render.ui.Menu;
 
-import javafx.scene.paint.Color;
-
 public class CellularAutomata {
-	private Container c;
-	private Renderer r;
-	private Graphics g;
 	public static Cell[] cells;
 	public static Cell[] newCells;
 	public static double maxStrength = Cell.startStrength;
@@ -22,11 +16,8 @@ public class CellularAutomata {
 	
 	
 	public CellularAutomata(Container c){
-		this.c = c;
 		cells = new Cell[(Container.getWIDTH() / Container.CELLSIZE) * (Container.HEIGHT / Container.CELLSIZE)];
 		newCells = new Cell[(Container.getWIDTH() / Container.CELLSIZE) * (Container.HEIGHT / Container.CELLSIZE)];
-		
-		r = c.getRenderer();
 	}
 	
 	public static void create(){
@@ -83,7 +74,7 @@ public class CellularAutomata {
 				y += Container.CELLSIZE;
 				x = 0;
 			}
-			r.fillRect(x, y, Container.CELLSIZE, Container.CELLSIZE, Viewmodes.renderMode(cells[i]));
+			Renderer.fillRect(x, y, Container.CELLSIZE, Container.CELLSIZE, Viewmodes.renderMode(cells[i]));
 			
 			x += Container.CELLSIZE;
 		}
@@ -103,7 +94,7 @@ public class CellularAutomata {
 	}
 
 	public void setCells(Cell[] cells) {
-		this.cells = cells;
+		CellularAutomata.cells = cells;
 	}
 
 	public Cell[] getNewCells() {
@@ -111,7 +102,7 @@ public class CellularAutomata {
 	}
 
 	public void setNewCells(Cell[] newCells) {
-		this.newCells = newCells;
+		CellularAutomata.newCells = newCells;
 	}
 	
 

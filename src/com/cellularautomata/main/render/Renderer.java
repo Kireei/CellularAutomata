@@ -1,22 +1,21 @@
 package com.cellularautomata.main.render;
 
-import java.awt.Graphics;
 import java.awt.image.DataBufferInt;
 
 import com.cellularautomata.main.container.Container;
+import com.cellularautomata.main.container.Window;
 
 
 public class Renderer{
 	private static int pW;
 	private static int pH;
 	private static int[] p;
-	private Graphics g;
 	private static Font font;
 	public Renderer(Container c){
 		
-		pW = c.getWIDTH();
-		pH = c.getHEIGHT();
-		p = ((DataBufferInt) c.getWindow().getImage().getRaster().getDataBuffer()).getData();
+		pW = Container.getWIDTH();
+		pH = Container.getHEIGHT();
+		p = ((DataBufferInt) Window.getImage().getRaster().getDataBuffer()).getData();
 		font = new Font("/standardFont.png");
 	}
 	
@@ -50,7 +49,7 @@ public class Renderer{
 		int newHeight = height;
 
 		// Clipping code
-		if (offX < 0) {
+		if (newX < 0) {
 			newX -= offX;
 		}
 		if (newY < 0) {
@@ -98,6 +97,6 @@ public class Renderer{
 	}
 
 	public void setP(int[] p) {
-		this.p = p;
+		Renderer.p = p;
 	}
 }

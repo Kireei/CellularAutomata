@@ -111,7 +111,6 @@ public class Cell {
 	}
 	
 	public double generateStrength(Cell cell){
-		double pStrength = cell.strength;
 		double cStrength = cell.strength;
 		if(Math.random() > 0.995){
 			cStrength += (Math.random() - 0.5) * 4;

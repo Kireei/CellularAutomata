@@ -2,8 +2,6 @@ package com.cellularautomata.main.render;
 
 import java.util.ArrayList;
 
-import javax.swing.JLabel;
-
 import com.cellularautomata.main.cell.Cell;
 import com.cellularautomata.main.cell.CellularAutomata;
 import com.cellularautomata.main.container.Container;
@@ -20,7 +18,6 @@ public class InfoBox {
 	private int color;
 	private int age;
 	private double strength;
-	private boolean living;
 	private boolean sick;
 	private boolean spreadable;
 	private int spreadCooldown;
@@ -74,14 +71,11 @@ public class InfoBox {
 		color = cell.color;
 		age = cell.age;
 		strength = cell.strength;
-		living = cell.living;
 		sick = cell.sick;
 		spreadable = cell.spreadable;
 		spreadCooldown = cell.spreadCooldown;
 		strengthMutation = cell.strengthMutation;
 	}
 	
-	private void addToList(String title){
-		titles.add(title);
-	}
+
 }
