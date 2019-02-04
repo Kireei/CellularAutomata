@@ -82,6 +82,7 @@ public class Container implements Runnable{
 						fps = frames;
 						frames = 0;
 						System.out.println("FPS: " + fps + ", MOUSE COORDINATES: " + Controlls.getMouseCoords());
+						System.out.println(CellularAutomata.nFactions);
 						
 						//ca.update();
 					}
