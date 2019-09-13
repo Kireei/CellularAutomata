@@ -8,7 +8,7 @@ public class Container implements Runnable{
 	private final double UPDATE_CAP = 1.0 / 240.0;
 	public static final int WIDTH = 1600, HEIGHT = 900;
 	private float scale = 1f;
-	public static final int CELLSIZE = 2; // Must work in the provided aspect ratio
+	public static final int CELLSIZE = 16; // Must work in the provided aspect ratio
 	public static final int COLONIES = 5000;
 	public static final int CELLX = WIDTH / CELLSIZE;
 	public static final int CELLY = HEIGHT / CELLSIZE;

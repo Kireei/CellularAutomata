@@ -10,6 +10,7 @@ import com.cellularautomata.main.render.Renderer;
 
 public class Menu {
 	public ArrayList<String> titles;
+	private int h;
 	protected int x;
 	protected int y;
 	protected int w;
@@ -73,6 +74,7 @@ public class Menu {
 	
 	public void addTitle(String title){
 		this.titles.add(title);
+		this.h = titles.size() * 7;
 		int width = title.length() * 4;
 		
 		for(int i = 0; i < titles.size(); i++){
