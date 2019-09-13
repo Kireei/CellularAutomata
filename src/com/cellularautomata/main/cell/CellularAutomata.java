@@ -11,6 +11,7 @@ import com.cellularautomata.main.render.ui.Menu;
 public class CellularAutomata {
 	public static Cell[] cells;
 	public static Cell[] newCells;
+	public static int nFactions;
 	public static double maxStrength = Cell.startStrength;
 	public static ArrayList<Menu> menues = new ArrayList<>();
 	
@@ -18,6 +19,7 @@ public class CellularAutomata {
 	public CellularAutomata(Container c){
 		cells = new Cell[(Container.getWIDTH() / Container.CELLSIZE) * (Container.HEIGHT / Container.CELLSIZE)];
 		newCells = new Cell[(Container.getWIDTH() / Container.CELLSIZE) * (Container.HEIGHT / Container.CELLSIZE)];
+		nFactions = 0;
 	}
 	
 	public static void create(){
@@ -30,6 +32,7 @@ public class CellularAutomata {
 			int randCell = (int) Math.floor(Math.random() * cells.length);
 			cells[randCell].color = (int) (Math.random() * 0xff000000);
 			cells[randCell].faction = i + 1; // Plus one since 0 is white faction and neutral
+			nFactions++;
 			
 		}
 		for(int i = 0; i < cells.length; i++){

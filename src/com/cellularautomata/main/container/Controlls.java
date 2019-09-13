@@ -81,6 +81,7 @@ public class Controlls {
 						case KILLFACTION:
 							int faction = CellularAutomata.cells[(int) ((getMousePoint().y / Container.CELLSIZE) * Container.CELLX  + (getMousePoint().x / Container.CELLSIZE))].faction;
 							for(Cell cell: CellularAutomata.cells) if(faction == cell.faction)cell.kill(cell);
+							CellularAutomata.nFactions--;
 							break;
 						case BLACKCELL:
 							CellularAutomata.cells[(int) ((getMousePoint().y / Container.CELLSIZE) * Container.CELLX  + (getMousePoint().x / Container.CELLSIZE))].black();

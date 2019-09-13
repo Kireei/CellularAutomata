@@ -82,7 +82,7 @@ public class Cell {
 		newCell.strengthMutation = this.strengthMutation;
 		if(Math.random() > 0.9)kill(this);
 		this.spreadable = false;
-		this.spreadCooldown = 200;
+		this.spreadCooldown = 2;
 		if(Math.random() + this.age / 500 > 0.95){
 			newCell.sick = true;
 		}
